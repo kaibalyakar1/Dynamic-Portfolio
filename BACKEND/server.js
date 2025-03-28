@@ -8,6 +8,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
+app.use(morgan("dev"));
 
 // Connect to MongoDB and start server
 const PORT = process.env.PORT || 5000;
